@@ -1,0 +1,5 @@
+numpy
+requests
+pytest
+seaborn
+bs4
