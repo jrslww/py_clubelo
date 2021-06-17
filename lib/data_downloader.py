@@ -13,8 +13,9 @@ def getRanking():
 
 def showRanking(day):
     url = requests.get(URL + str(day))
-    data = StringIO(url.text)
-    df = pd.read_csv(data, sep=",")
+    if url.status_code == 200:
+        data = StringIO(url.text)
+        df = pd.read_csv(data, sep=",")
     return df
 
 
