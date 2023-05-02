@@ -5,7 +5,9 @@ from io import StringIO
 
 URL = 'http://api.clubelo.com/'
 
+
 def get_ranking(date=None):
+
     if date is None:
         date = datetime.now().date()
     url = requests.get(URL + str(date))
@@ -17,8 +19,10 @@ def get_ranking(date=None):
         print(f"Error: {url.status_code}")
         return None
 
+
 def filter_by_country(df, country_tag):
     return df.loc[df['Country'] == country_tag]
+
 
 def get_club_data(club_list):
     dfs = []

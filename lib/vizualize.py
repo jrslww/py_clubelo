@@ -1,3 +1,4 @@
+import pandas as pd
 import plotly.express as px
 
 def plot_club_elo(club_list, df):
